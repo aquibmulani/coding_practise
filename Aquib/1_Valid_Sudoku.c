@@ -1,3 +1,4 @@
+// Function to check a valid row in the sudoku board 
 bool checkRow(char **board, int n)
 {
     char boardstatus[10] = {0};
@@ -19,7 +20,7 @@ bool checkRow(char **board, int n)
     }
     return true;
 }
-
+// Function to check a valid column in the sudoku board
 bool checkCol(char **board, int n)
 {
     char boardstatus[10] = {0};
@@ -42,10 +43,11 @@ bool checkCol(char **board, int n)
     return true;
     
 }
-
+// Function to check a valid 3X3  grid in the sudoku board
 bool checkGrid(char **board, int n)
 {
     char boardstatus[10] = {0};
+    // Always start to the top left of the grid
     int row = (n /3) * 3;
     int col = (n % 3) * 3;
     for(int r = row; r < (row+3);r++)
@@ -75,9 +77,9 @@ bool checkGrid(char **board, int n)
 bool isValidSudoku(char** board, int boardSize, int* boardColSize)
 {
    for(int n = 0; n < boardSize; n++){
-        if( checkRow(board, n) == false ) return false;
-        if( checkCol(board, n) == false ) return false;
-        if ( checkGrid(board, n) == false ) return false;
+        if( !checkRow(board, n)) return false;
+        if( !checkCol(board, n)) return false;
+        if ( !checkGrid(board, n)) return false;
     }
     return true;
 }
