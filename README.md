@@ -5,3 +5,6 @@
 Questions in order:
 
 1. Valid Sudoku: https://leetcode.com/problems/valid-sudoku/
+
+2.Letter Combinations of a PhoneNumber:
+  https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/
